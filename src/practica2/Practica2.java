@@ -23,41 +23,53 @@ public class Practica2 {
 
         Gato juego = new Gato();
         juego.jugarGato();
+     
 //Para la clase de la calculadora
+        Calculadora calculadora1 = new Calculadora();
         Scanner read = new Scanner(System.in);
-        int opc = 0;
-        double res = 0, num=0;
+        int opc = 0, opc2 = 0;
+        double num;
+        do{
         System.out.println("<--------MENU CALCULADORA-------->");
         System.out.println("Elige las opciones que quieres realizar por favor");
         System.out.println("1.- Suma");
         System.out.println("2.- Resta");
         System.out.println("3.- Multiplicacion");
         System.out.println("4.- Division");
-        System.out.println("Escribe el numero: ");
-        num = read.nextInt();
-        Calculadora cal = new Calculadora();
+        System.out.println("Escribe el numero o accion que deseas ejecutar: ");
         switch(opc){
             case 1 : 
             {
-                res = cal.suma(num);
-                System.out.println("El resultado es: "+res);
+                System.out.println("Ingrese el dato a sumar: ");
+                num = read.nextDouble();
+                calculadora1.suma(num);
+                break;
             }
             case 2: 
             {
-                res = cal.resta(num);
-                System.out.println("El resultado es: "+res);
+                System.out.println("Ingrese el dato a restar: ");
+                num = read.nextDouble();
+                calculadora1.resta(num);
+                break;
             }
             case 3: 
             {
-                 res = cal.multiplicacion(num);
-                 System.out.println("El resultado es: "+res);
+                 System.out.println("Ingrese el dato a multiplicar");
+                 num = read.nextDouble();
+                 calculadora1.multiplicacion(num);
+                 break;
             }
             case 4: 
             {
-                res = cal.multiplicacion(num);
-                System.out.println("El resultado es: "+res);                
+                System.out.println("Ingrese el dato a dividir: ");
+                num = read.nextDouble();
+                calculadora1.division(num);
+                break;
+                
             }
         }
+        System.out.println("Deseas seguir ingresando numeros?: [0-->No|1-->Si]");
+        }while(opc2 != 0);
     }
     
 }

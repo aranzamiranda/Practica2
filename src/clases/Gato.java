@@ -71,38 +71,30 @@ public class Gato {
   public void setCont(int conta){
       cont = conta;
   }
- 
-  //Regresa Valor De La Posicion Del Arreglo Indicada Por Medio De Parametros.  
+  
   public char getPosicion(int a, int b){
       return tablero[a][b];
   }
    
-  //Regresa Valor De La Variable "jugadorUno".
   public char getJugador1(){
       return jugador1;
   }      
-   
-  //Regresa Valor De La Variable "jugadorDos".
   public char getJugador2(){
       return jugador2;
   }      
- 
-  //Regresa Valor De La Variable "turno".
+
   public boolean getTurno(){
       return turno;
-  }
-  //Regresa Valor De La Variable "contador".        
+  }      
   public int getCont() {
       return cont;
   }      
  
- 
-  //Imprime e Indica El El Turno Del Jugador Que Le Toca Elejir Una Casilla Con Ayuda del Metodo "getTurno()".
+
   public void indiqueTurno(){
     System.out.println( "Jugador "+(getTurno()?"1":"2")+": Indique una casilla marcando el numero correspondiente porfavor");
   }
  
-  //Regresa El Caracter De Tipo Char Para Posteriormente Ingresarlo A Alguna Posicion Del Arreglo, Usandolo En Otro Metodo.
   public char obtenerFigura(){
     
     if(getTurno() == true){      
@@ -129,9 +121,7 @@ public class Gato {
     else{           
        System.out.println("La casilla esta ocupada, elija otra.");          
     }
-  }
-         
-  //Metodo Que Hace Uso De Un "switch" Para Indicar La Posicion Del Arreglo Que El Jugador Elijio En El Juego.  
+  }  
   public void posicion(int posicion){
                
       switch(posicion){
